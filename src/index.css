@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.pcAuthBtn {
+    @apply h-9 px-5 text-white bg-blue-500 hover:bg-blue-400 rounded-lg flex items-center justify-center gap-x-2
+}
+.mobileAuthBtn {
+    @apply h-7 px-3 text-white bg-blue-500 hover:bg-blue-400 rounded-lg flex items-center justify-center gap-x-1
+}
