@@ -1,4 +1,5 @@
 import { HiArrowNarrowRight } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
     return <div>
@@ -21,26 +22,32 @@ export default function Navbar() {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="dropdown-content bg-base-100 rounded-md z-[1] mt-3 w-[95vw] p-2 shadow space-y-3">
-                        <li className="hover:underline hover:text-blue-500 cursor-pointer">Facility</li>
-                        <li className="hover:underline hover:text-blue-500 cursor-pointer">Contact Us</li>
-                        <li className="hover:underline hover:text-blue-500 cursor-pointer">About Us</li>
+                        className="dropdown-content font-semibold bg-base-100 rounded-md z-[1] mt-3 w-[calc(100vw_-_16px)] p-5 shadow space-y-3">
+                        <li className="hover:underline hover:text-blue-700 cursor-pointer">Facility</li>
+                        <li className="hover:underline hover:text-blue-700 cursor-pointer">Contact Us</li>
+                        <li className="hover:underline hover:text-blue-700 cursor-pointer">About Us</li>
                     </ul>
                 </div>
-                <p className="hover:cursor-pointer text-xl md:text-3xl font-bold">ME<span className="text-blue-500">NE</span>RA</p>
+                <Link to="/">
+                    <p className="hover:cursor-pointer text-xl md:text-3xl font-bold">ME<span className="text-blue-700">NE</span>RA</p>
+                </Link>
             </div>
             <div className="navbar-start hidden lg:flex">
                 <ul className="menu menu-horizontal flex gap-x-10 text-lg font-semibold">
-                    <li className="hover:underline hover:text-blue-500 cursor-pointer">Facility</li>
-                    <li className="hover:underline hover:text-blue-500 cursor-pointer">Contact Us</li>
-                    <li className="hover:underline hover:text-blue-500 cursor-pointer">About Us</li>
+                    <li className="hover:underline hover:text-blue-700 cursor-pointer">Facility</li>
+                    <li className="hover:underline hover:text-blue-700 cursor-pointer">Contact Us</li>
+                    <li className="hover:underline hover:text-blue-700 cursor-pointer">About Us</li>
                 </ul>
             </div>
             <div className="navbar-end">
-                <button className="mobileAuthBtn md:h-9 md:gap-x-3">
-                    <p>Login</p>
-                    <HiArrowNarrowRight></HiArrowNarrowRight>
-                </button>
+                <Link to="/login">
+                    <button className="primaryBtn md:h-9 md:gap-x-3">
+                        <p>Login</p>
+                        <p className="hidden md:block">
+                            <HiArrowNarrowRight></HiArrowNarrowRight>
+                        </p>
+                    </button>
+                </Link>
             </div>
         </div>
     </div>;

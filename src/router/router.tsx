@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Prime from "../layout/Prime";
-import App from "../App";
+import Login from "../pages/auth/Login";
+import Landing from "../pages/landing/Landing";
 
 const router = createBrowserRouter([
     {
@@ -9,10 +10,17 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element: <App></App>
+                element: <Landing></Landing>
+            },
+
+
+            // auth related routes
+            {
+                path: "/login",
+                element: <Login></Login>
             }
         ]
-    },
+    }
 ]);
 
 export default router;
