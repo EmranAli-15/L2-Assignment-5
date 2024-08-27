@@ -7,10 +7,10 @@ export default function Testimonial() {
                 <h1 className="text-blue-600 font-semibold uppercase">testimonial</h1>
                 <h1 className="font-bold text-3xl md:text-5xl text-black">Satisfied Clients</h1>
 
-                <div className="grid md:grid-cols-2 mt-5 pb-20">
+                <div className="grid md:grid-cols-2 mt-5 md:pb-20">
                     <div className="md:relative">
                         <div>
-                            <img className="h-[350px] w-[350px] md:w-[35%] object-cover" src="https://img.freepik.com/free-photo/football-player-jugging-arena_23-2147644528.jpg?t=st=1724743394~exp=1724746994~hmac=5b2433994a2a719d41b65991fd7a7951d15c7520ea8a1fe485088f9f8e4471e7&w=740" alt="" />
+                            <img className="h-[350px] w-full md:w-[35%] object-cover" src="https://img.freepik.com/free-photo/football-player-jugging-arena_23-2147644528.jpg?t=st=1724743394~exp=1724746994~hmac=5b2433994a2a719d41b65991fd7a7951d15c7520ea8a1fe485088f9f8e4471e7&w=740" alt="" />
                         </div>
 
                         <div className="hidden md:block md:absolute top-[50%] left-[38%]">
@@ -31,8 +31,8 @@ export default function Testimonial() {
 
                     <div className="flex items-center justify-center">
                         <div>
-                            <h1 className="text-center my-10">asdf</h1>
-                            <p className="text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, voluptates non deserunt minus blanditiis explicabo necessitatibus, architecto, molestias voluptatem obcaecati eligendi dolorum nostrum sit possimus fuga animi? Atque, rem, quas earum mollitia voluptas laboriosam impedit, quod possimus nostrum facere corporis.</p>
+                            <h1 className="font-bold text-center text-3xl md:text-5xl text-black">Satisfied Clients</h1>
+                            <p className="text-justify text-xl mt-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, voluptates non deserunt minus blanditiis explicabo necessitatibus, architecto, molestias voluptatem obcaecati eligendi dolorum nostrum sit possimus fuga animi? Atque, rem, quas earum mollitia voluptas laboriosam impedit, quod possimus nostrum facere corporis.</p>
                         </div>
                     </div>
                 </div>
