@@ -40,6 +40,9 @@ export default function Navbar() {
                 </ul>
             </div>
             <div className="navbar-end">
+                <Link to="/dashboard">
+                    <button>dash</button>
+                </Link>
                 <Link to="/login">
                     <button className="primaryBtn md:h-9 md:gap-x-3">
                         <p>Login</p>
