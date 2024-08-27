@@ -4,7 +4,7 @@ export default function Facilities() {
     return (
         <div className="bgColor mt-20">
 
-            <div className="max-w-7xl mx-auto px-2 md:px-0 py-10">
+            <div className="max-w-7xl mx-auto px-2 py-10">
                 <h1 className="text-blue-600 font-semibold uppercase">Popular Facilities</h1>
                 <h1 className="font-bold text-3xl md:text-5xl text-black">We will continue to develop our facilities</h1>
 

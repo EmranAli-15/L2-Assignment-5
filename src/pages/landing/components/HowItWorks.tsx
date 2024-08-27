@@ -2,7 +2,7 @@
 export default function HowItWorks() {
     return (
         <div className="mt-20">
-            <div className="max-w-7xl mx-auto px-2 md:px-0">
+            <div className="max-w-7xl mx-auto px-2">
                 <h1 className="text-blue-600 font-semibold uppercase">booking guide</h1>
                 <h1 className="font-bold text-3xl md:text-5xl text-black">How can you book a facility ?</h1>
 

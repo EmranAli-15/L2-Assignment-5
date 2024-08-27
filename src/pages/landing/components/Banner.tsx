@@ -7,7 +7,7 @@ export default function Banner() {
                 <img className="mix-blend-multiply h-[80vh] md:w-screen md:h-[85vh] object-cover" src={landingBanner} alt="" />
 
                 <div className="max-w-7xl mx-auto">
-                    <div className="absolute top-[20%] md:top-0 md:translate-y-1/2 px-2 md:px-0">
+                    <div className="absolute top-[20%] md:top-0 md:translate-y-1/2 px-2">
                         <p className="font-semibold">WELCOME TO MENERA</p>
 
                         <h1 className="my-4 md:my-6 text-4xl md:text-5xl font-bold myFont">International <br /> Standard Futsal <br /> Field</h1>
