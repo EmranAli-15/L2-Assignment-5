@@ -3,7 +3,6 @@ import Prime from "../layout/Prime";
 import Login from "../pages/auth/Login";
 import Landing from "../pages/landing/Landing";
 import Dashboard from "../layout/Dashboard";
-import Admin from "../pages/dashboard/Admin";
 import Create from "../pages/dashboard/admin/Create";
 import Update from "../pages/dashboard/admin/Update";
 import Welcome from "../pages/dashboard/Welcome";
