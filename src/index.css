@@ -9,3 +9,11 @@
 .secondaryBtn {
     @apply h-8 px-3 text-white bg-transparent border-[1px] border-blue-600 hover:bg-blue-700 rounded-md flex items-center justify-center gap-x-1
 }
+
+.myFont {
+    font-family: 'Anek Bangla';
+}
+
+.bgColor {
+    @apply bg-[#FAF7EF]
+}
