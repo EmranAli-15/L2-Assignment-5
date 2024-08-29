@@ -2,14 +2,14 @@ import { Link, Outlet } from "react-router-dom";
 import Admin from "../pages/dashboard/Admin";
 import User from "../pages/dashboard/User";
 import { useState } from "react";
-import Navbar from "../pages/shared/Navbar";
 import { FaHome } from "react-icons/fa";
+import { useAppSelector } from "../redux/hooks";
 
 export default function Dashboard() {
-
-    const admin = true;
-
     const [open, setOpen] = useState(false);
+
+    const { user } = useAppSelector(state => state.auth) || {};
+    const { role } = user || {};
 
     return (
         <div className="relative">
@@ -26,14 +26,14 @@ export default function Dashboard() {
                 </div>
                 <div>
                     {
-                        admin ? <Admin open={open} setOpen={setOpen}></Admin> : <User open={open} setOpen={setOpen}></User>
+                        role === "admin" ? <Admin open={open} setOpen={setOpen}></Admin> : <User open={open} setOpen={setOpen}></User>
                     }
                 </div>
             </div>
 
-            <div className="md:absolute left-64 h-screen" onClick={() => setOpen(false)}>
+            <div className="md:absolute left-64 md:w-[calc(100vw_-_18rem)] h-screen px-2 md:px-10" onClick={() => setOpen(false)}>
                 <Outlet></Outlet>
             </div>
         </div>
     );
-}
+};

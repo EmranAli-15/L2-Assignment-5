@@ -1,7 +1,12 @@
 import { HiArrowNarrowRight } from "react-icons/hi";
+import { MdSpaceDashboard } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { useAppSelector } from "../../redux/hooks";
 
 export default function Navbar() {
+
+    const { user } = useAppSelector(state => state.auth);
+
     return <div>
         <div className="navbar bg-base-100">
             <div className="navbar-start">
@@ -40,17 +45,22 @@ export default function Navbar() {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to="/dashboard">
-                    <button>dash</button>
-                </Link>
-                <Link to="/login">
-                    <button className="primaryBtn md:h-9 md:gap-x-3">
-                        <p>Login</p>
-                        <p className="hidden md:block">
-                            <HiArrowNarrowRight></HiArrowNarrowRight>
-                        </p>
-                    </button>
-                </Link>
+                {
+                    user ?
+                        <Link to="/dashboard">
+                            <button>
+                                <MdSpaceDashboard size={25}></MdSpaceDashboard>
+                            </button>
+                        </Link> :
+                        <Link to="/login">
+                            <button className="primaryBtn md:h-9 md:gap-x-3">
+                                <p>Login</p>
+                                <p className="hidden md:block">
+                                    <HiArrowNarrowRight></HiArrowNarrowRight>
+                                </p>
+                            </button>
+                        </Link>
+                }
             </div>
         </div>
     </div>;

@@ -1,4 +1,13 @@
+import { RouterProvider } from 'react-router-dom'
+import router from './router/router.tsx'
+import useAuthChecked from './hooks/useAuthChecked.ts';
 
 export default function App() {
-  return <div>App</div>;
+  useAuthChecked();
+  
+  return (
+    <RouterProvider router={router}>
+
+    </RouterProvider>
+  );
 }
