@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link, Navigate, Outlet } from "react-router-dom";
 import Admin from "../pages/dashboard/Admin";
 import User from "../pages/dashboard/User";
 import { useState } from "react";
@@ -26,7 +26,7 @@ export default function Dashboard() {
                 </div>
                 <div>
                     {
-                        role === "admin" ? <Admin open={open} setOpen={setOpen}></Admin> : <User open={open} setOpen={setOpen}></User>
+                        role === "admin" ? <Admin open={open} setOpen={setOpen}></Admin> : role === "user" ? <User open={open} setOpen={setOpen}></User> : <h1>Loading...</h1>
                     }
                 </div>
             </div>

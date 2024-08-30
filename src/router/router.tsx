@@ -7,7 +7,7 @@ import Create from "../pages/dashboard/admin/Create";
 import Update from "../pages/dashboard/admin/Update";
 import Welcome from "../pages/dashboard/Welcome";
 import Register from "../pages/auth/Register";
-
+import AdminSecure from "./PrivetRoute";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -44,11 +44,11 @@ const router = createBrowserRouter([
             },
             {
                 path: "dashboard/admin/create",
-                element: <Create></Create>
+                element: <AdminSecure><Create></Create></AdminSecure>
             },
             {
                 path: "dashboard/admin/update",
-                element: <Update></Update>
+                element: <AdminSecure><Update></Update></AdminSecure>
             },
         ]
     }

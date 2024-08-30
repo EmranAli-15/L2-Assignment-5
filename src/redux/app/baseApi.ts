@@ -5,7 +5,6 @@ const baseQuery = fetchBaseQuery({
     baseUrl: 'http://localhost:5000',
     prepareHeaders: (headers, { getState }) => {
         const token = (getState() as RootState).auth.accessToken;
-        console.log(token);
 
         if (token) {
             headers.set('authorization', `Bearer ${token}`);
@@ -19,12 +18,11 @@ export const baseApi = createApi({
     reducerPath: 'baseApi',
     baseQuery: async (args: any, api: BaseQueryApi, extraOptions: Record<string, unknown>) => {
         let result = await baseQuery(args, api, extraOptions);
-        console.log(result);
 
 
         return result
     },
-    tagTypes: [],
+    tagTypes: ["facilities"],
     endpoints: () => ({}),
 });
 

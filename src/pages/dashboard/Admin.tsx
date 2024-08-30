@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaHome } from "react-icons/fa";
+import { FaHome, FaArrowDown } from "react-icons/fa";
 import { FaTableTennisPaddleBall } from "react-icons/fa6";
 import { useState } from "react";
 
@@ -30,7 +30,7 @@ export default function Admin({ open, setOpen }: { open: boolean, setOpen: (arg:
                         <div>
                             <div onClick={() => setFacilityDropdown(!facilityDropdown)} className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group cursor-pointer">
                                 <FaTableTennisPaddleBall className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" size={24}></FaTableTennisPaddleBall>
-                                <span className="flex-1 ms-3 whitespace-nowrap">Facility Actions</span>
+                                <span className="flex items-center gap-x-3 ms-3 whitespace-nowrap"><span>Facility Actions</span> <FaArrowDown></FaArrowDown> </span>
                             </div>
 
                             <div className={`${facilityDropdown ? 'block' : 'hidden'} ml-3 bg-gray-200 p-2 rounded-lg`}>
