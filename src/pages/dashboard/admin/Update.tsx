@@ -5,6 +5,7 @@ import Loader from "../../../ui/Loader";
 import Error from "../../../ui/Error";
 import { useEffect } from "react";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 export default function Update() {
 
@@ -66,7 +67,9 @@ export default function Update() {
         </td>
         <td className="flex flex-col gap-4">
           <button>
-            <FaEdit className="text-blue-600 hover:text-blue-700 size-5"></FaEdit>
+            <Link to={`/dashboard/admin/updateFacility/${facility._id}`}>
+              <FaEdit className="text-blue-600 hover:text-blue-700 size-5"></FaEdit>
+            </Link>
           </button>
           <button onClick={() => handleDelete(facility._id)}>
             <RiDeleteBin3Fill className="text-red-600 hover:text-red-700 size-5"></RiDeleteBin3Fill>
@@ -82,31 +85,6 @@ export default function Update() {
 
           <tbody>
             {content}
-            {/* <tr>
-              <td>
-                <div className="flex items-center gap-3">
-                  <div className="avatar">
-                    <div className="h-12 w-24 rounded-sm">
-                      <img
-                        src="https://img.daisyui.com/images/profile/demo/2@94.webp"
-                        alt="Avatar Tailwind CSS Component" />
-                    </div>
-                  </div>
-                  <div>
-                    <div className="font-bold">Hart Hagerty</div>
-                    <div className="text-sm text-red-600 font-semibold">United States</div>
-                  </div>
-                </div>
-              </td>
-              <td className="flex flex-col gap-4">
-                <button>
-                  <FaEdit className="text-blue-600 hover:text-blue-700 size-5"></FaEdit>
-                </button>
-                <button>
-                  <RiDeleteBin3Fill className="text-red-600 hover:text-red-700 size-5"></RiDeleteBin3Fill>
-                </button>
-              </td>
-            </tr> */}
           </tbody>
         </table>
       </div>
