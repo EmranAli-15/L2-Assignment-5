@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useGetPopularFacilityQuery } from "../../../redux/features/facility/facilityApi";
 import Error from "../../../ui/Error";
 import Loader from "../../../ui/Loader";
@@ -15,7 +16,7 @@ export default function Facilities() {
     };
     if (!isLoading && !isError && facilities.data) {
         content = facilities.data.map((facility: any) => {
-            return <div key={facility._id} className="border hover:scale-105 overflow-auto transition cursor-pointer bg-white">
+            return <Link to={`/bookings/${facility._id}`} key={facility._id} className="border hover:scale-105 overflow-auto transition bg-white">
                 <div className="h-52 object-contain overflow-hidden">
                     <img src={facility.image} alt="" />
                 </div>
@@ -23,7 +24,7 @@ export default function Facilities() {
                     <h3 className="text-xl text-black font-semibold">{facility.name}</h3>
                     <p>{facility.description}</p>
                 </div>
-            </div>
+            </Link>
         })
     }
 

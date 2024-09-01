@@ -9,6 +9,8 @@ import Welcome from "../pages/dashboard/Welcome";
 import Register from "../pages/auth/Register";
 import AdminSecure from "./PrivetRoute";
 import UpdateFacility from "../pages/dashboard/admin/UpdateFacility";
+import FacilityListing from "../pages/facilityListing/FacilityListing";
+import Bookings from "../pages/booking/Bookings";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -17,6 +19,14 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Landing></Landing>
+            },
+            {
+                path: "/facilityListing",
+                element: <FacilityListing></FacilityListing>
+            },
+            {
+                path: "/bookings/:id",
+                element: <Bookings></Bookings>
             },
 
 

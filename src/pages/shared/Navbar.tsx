@@ -28,7 +28,7 @@ export default function Navbar() {
                     <ul
                         tabIndex={0}
                         className="dropdown-content font-semibold bg-base-100 rounded-md z-[1] mt-3 w-[calc(100vw_-_16px)] p-5 shadow space-y-3">
-                        <li className="hover:underline hover:text-blue-700 cursor-pointer">Facility</li>
+                        <Link to="/facilityListing" className="hover:underline hover:text-blue-700 cursor-pointer">Facility</Link>
                         <li className="hover:underline hover:text-blue-700 cursor-pointer">Contact Us</li>
                         <li className="hover:underline hover:text-blue-700 cursor-pointer">About Us</li>
                     </ul>
@@ -39,7 +39,7 @@ export default function Navbar() {
             </div>
             <div className="navbar-start hidden lg:flex">
                 <ul className="menu menu-horizontal flex gap-x-10 text-lg font-semibold">
-                    <li className="hover:underline hover:text-blue-700 cursor-pointer">Facility</li>
+                    <Link to="/facilityListing" className="hover:underline hover:text-blue-700 cursor-pointer">Facility</Link>
                     <li className="hover:underline hover:text-blue-700 cursor-pointer">Contact Us</li>
                     <li className="hover:underline hover:text-blue-700 cursor-pointer">About Us</li>
                 </ul>

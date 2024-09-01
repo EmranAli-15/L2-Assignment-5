@@ -3,6 +3,12 @@ import { baseApi } from "../../app/baseApi";
 const facilityApi = baseApi.injectEndpoints({
 
     endpoints: (builder) => ({
+        getAllFacility: builder.query({
+            query: () => ({
+                url: '/api/facility'
+            }),
+            providesTags: ["facilities"]
+        }),
         addFacility: builder.mutation({
             query: (data) => ({
                 url: '/api/facility',
@@ -19,12 +25,6 @@ const facilityApi = baseApi.injectEndpoints({
             query: () => ({
                 url: '/api/popularFacility'
             })
-        }),
-        getAllFacility: builder.query({
-            query: () => ({
-                url: '/api/facility'
-            }),
-            providesTags: ["facilities"]
         }),
         updateFacility: builder.mutation({
             query: ({ id, data }) => ({
