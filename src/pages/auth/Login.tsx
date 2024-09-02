@@ -5,8 +5,8 @@ import { useLoginUserMutation } from "../../redux/features/auth/authApi";
 export default function Login() {
     const navigate = useNavigate();
 
-    const [email, setEmail] = useState("emran@gmail.com");
-    const [password, setPassword] = useState("emran");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
     const [error, setError] = useState("");
 
     const [loginUser, { isLoading, isError, isSuccess }] = useLoginUserMutation();

@@ -5,12 +5,12 @@ import { useRegisterUserMutation } from "../../redux/features/auth/authApi";
 export default function Register() {
     const navigate = useNavigate();
 
-    const [name, setName] = useState("Opu");
-    const [email, setEmail] = useState("opu@gmail.com");
-    const [phone, setPhone] = useState("123");
-    const [address, setAddress] = useState("Dhaka");
-    const [password, setPassword] = useState("aaa");
-    const [confirmPass, setConfirmPass] = useState("aaa");
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [phone, setPhone] = useState("");
+    const [address, setAddress] = useState("");
+    const [password, setPassword] = useState("");
+    const [confirmPass, setConfirmPass] = useState("");
 
     const [error, setError] = useState("");
     const [registerUser, { isLoading, isError, isSuccess }] = useRegisterUserMutation();

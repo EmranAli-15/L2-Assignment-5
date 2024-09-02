@@ -1,4 +1,4 @@
-import { Link, Navigate, Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import Admin from "../pages/dashboard/Admin";
 import User from "../pages/dashboard/User";
 import { useState } from "react";

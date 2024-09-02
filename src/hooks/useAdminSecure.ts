@@ -28,7 +28,7 @@ export default function useAdminSecure() {
         return 'exit'; // User does not have a role
     }
 
-    if (role && !loading) {
+    if (role && role == 'admin' && !loading) {
         return 'access';
     }
 }

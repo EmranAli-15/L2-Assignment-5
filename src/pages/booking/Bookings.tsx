@@ -5,7 +5,7 @@ import { HiSelector } from "react-icons/hi";
 import Loader from "../../ui/Loader";
 import Error from "../../ui/Error";
 import { availabilityApi, useAvailabilityQuery } from "../../redux/features/availability/availability";
-import { useAppDispatch } from "../../redux/hooks";
+import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { useCreateBookingMutation } from "../../redux/features/bookings/bookingsApi";
 import toast, { Toaster } from "react-hot-toast";
 
@@ -14,6 +14,8 @@ export default function Bookings() {
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
     const [slotTimes, setSlotTimes] = useState([]);
+
+    const { user } = useAppSelector(state => state.auth);
 
     const { id } = useParams();
     useEffect(() => {
@@ -60,7 +62,12 @@ export default function Bookings() {
             startTime,
             endTime,
         };
-        createBooking(data);
+
+        if (!user) {
+            return toast.error("Please Login First.")
+        } else {
+            createBooking(data);
+        }
     }
 
 

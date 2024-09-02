@@ -11,6 +11,9 @@ import AdminSecure from "./PrivetRoute";
 import UpdateFacility from "../pages/dashboard/admin/UpdateFacility";
 import FacilityListing from "../pages/facilityListing/FacilityListing";
 import Bookings from "../pages/booking/Bookings";
+import UserPrivet from "./UserPrivate";
+import MyBookings from "../pages/dashboard/user/MyBookings";
+import AllBookings from "../pages/dashboard/admin/AllBookings";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -64,6 +67,17 @@ const router = createBrowserRouter([
             {
                 path: "/dashboard/admin/updateFacility/:id",
                 element: <AdminSecure><UpdateFacility></UpdateFacility></AdminSecure>
+            },
+            {
+                path: "/dashboard/admin/allBookings",
+                element: <AdminSecure><AllBookings></AllBookings></AdminSecure>
+            },
+
+
+            // user protection
+            {
+                path: "/dashboard/user/myBookings",
+                element: <UserPrivet><MyBookings></MyBookings></UserPrivet>
             },
         ]
     }
